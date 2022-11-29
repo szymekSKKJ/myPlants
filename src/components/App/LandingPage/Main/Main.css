@@ -1,0 +1,176 @@
+main {
+  width: 100%;
+  height: 90vh;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 150px 50px 0px 50px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  main {
+    padding: 50px 50px 0px 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    padding: 50px 10px 0px 10px;
+  }
+}
+main .title-and-button-wrapper {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  margin-top: 100px;
+  margin-right: 200px;
+}
+@media screen and (max-width: 1500px) {
+  main .title-and-button-wrapper {
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  main .title-and-button-wrapper {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .title-and-button-wrapper {
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .title-and-button-wrapper {
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width: 900px) {
+  main .title-and-button-wrapper {
+    margin-left: 0px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main .title-and-button-wrapper .title-wrapper {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  margin-bottom: 50px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  main .title-and-button-wrapper .title-wrapper {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 900px) {
+  main .title-and-button-wrapper .title-wrapper {
+    white-space: unset;
+  }
+}
+main .title-and-button-wrapper .title-wrapper h1 {
+  font-size: 60px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 1400px) {
+  main .title-and-button-wrapper .title-wrapper h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .title-and-button-wrapper .title-wrapper h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .title-and-button-wrapper .title-wrapper h1 {
+    font-size: 35px;
+  }
+}
+main .title-and-button-wrapper .title-wrapper p {
+  font-size: 30px;
+  margin-left: 50px;
+}
+@media screen and (max-width: 1400px) {
+  main .title-and-button-wrapper .title-wrapper p {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .title-and-button-wrapper .title-wrapper p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .title-and-button-wrapper .title-wrapper p {
+    font-size: 18px;
+    margin-left: 33px;
+  }
+}
+@media screen and (max-width: 900px) {
+  main .title-and-button-wrapper .title-wrapper p {
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+main .title-and-button-wrapper button {
+  margin-left: 50px;
+}
+@media screen and (max-width: 1400px) {
+  main .title-and-button-wrapper button {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .title-and-button-wrapper button {
+    margin-left: 33px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 900px) {
+  main .title-and-button-wrapper button {
+    margin-left: 0px;
+  }
+}
+main .main-image {
+  width: 450px;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 50px;
+}
+@media screen and (max-width: 900px) {
+  main .main-image {
+    display: none;
+  }
+}
+main .main-image img {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  filter: drop-shadow(0px 0px 16px #99ffc5);
+  transform: scale(1.75);
+}
+@media screen and (max-width: 1400px) {
+  main .main-image img {
+    transform: scale(1.5);
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .main-image img {
+    transform: scale(1.33);
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .main-image img {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=Main.css.map */

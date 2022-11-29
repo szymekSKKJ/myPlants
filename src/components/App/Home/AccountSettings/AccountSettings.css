@@ -1,0 +1,64 @@
+.account-settings {
+  max-width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  padding: 50px 50px 50px 100px;
+}
+@media screen and (max-width: 1024px) {
+  .account-settings {
+    padding: 25px 25px 25px 75px;
+  }
+}
+.account-settings .header {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  margin: 50px 0px 50px 100px;
+}
+@media screen and (max-width: 1024px) {
+  .account-settings .header {
+    margin: 50px 0px 50px 25px;
+  }
+}
+.account-settings .header h1 {
+  font-size: 50px;
+}
+@media screen and (max-width: 768px) {
+  .account-settings .header h1 {
+    font-size: 36px;
+  }
+}
+.account-settings .options {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+.account-settings .options .option {
+  width: 100%;
+  height: 50px;
+  background-color: #00c97f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px 0px 16px;
+  transition: background-color 250ms;
+  cursor: pointer;
+}
+.account-settings .options .option:hover {
+  background-color: #00e691;
+}
+.account-settings .options .option .title {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.account-settings .options .option .title span {
+  font-size: 13px;
+  margin-top: -2px;
+}/*# sourceMappingURL=AccountSettings.css.map */

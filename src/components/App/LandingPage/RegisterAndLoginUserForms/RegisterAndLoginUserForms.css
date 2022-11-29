@@ -1,0 +1,187 @@
+.register-and-login-user-form {
+  width: 100%;
+  height: auto;
+  background-color: #ccffe2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px 100px 50px;
+  margin-top: 250px;
+}
+@media screen and (max-width: 768px) {
+  .register-and-login-user-form {
+    padding: 0px 20px 0px 20px;
+  }
+}
+.register-and-login-user-form h2 {
+  margin-bottom: 200px;
+  font-size: 50px;
+}
+@media screen and (max-width: 768px) {
+  .register-and-login-user-form h2 {
+    font-size: 44px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .register-and-login-user-form h2 {
+    font-size: 36px;
+  }
+}
+.register-and-login-user-form .forms-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .register-and-login-user-form .forms-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.register-and-login-user-form .forms-wrapper .form-wrapper {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+}
+.register-and-login-user-form .forms-wrapper .form-wrapper h3 {
+  margin-bottom: 25px;
+  margin-left: -33px;
+  font-size: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .register-and-login-user-form .forms-wrapper .form-wrapper h3 {
+    font-size: 32px;
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .register-and-login-user-form .forms-wrapper .form-wrapper h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+}
+.register-and-login-user-form .forms-wrapper > p {
+  font-size: 32px;
+  margin: auto 250px auto 250px;
+}
+@media screen and (max-width: 1420px) {
+  .register-and-login-user-form .forms-wrapper > p {
+    margin: auto 125px auto 125px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .register-and-login-user-form .forms-wrapper > p {
+    margin: auto 50px auto 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .register-and-login-user-form .forms-wrapper > p {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .register-and-login-user-form .forms-wrapper > p {
+    margin: 50px auto 50px auto;
+  }
+}
+.register-and-login-user-form .forms-wrapper form {
+  width: 350px;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .register-and-login-user-form .forms-wrapper form {
+    width: 250px;
+  }
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  flex-shrink: 0;
+  margin: 10px 0px 10px 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper label {
+  background-color: transparent;
+  transform: translateX(-100%);
+  transition: 250ms ease-in-out;
+  order: 1;
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border: unset;
+  border-radius: 3px;
+  font-size: 20px;
+  outline: unset;
+  padding-left: 16px;
+  padding-top: 2px;
+  border: solid 2px transparent;
+  transition: border 250ms;
+  order: 2;
+}
+@media screen and (max-width: 1024px) {
+  .register-and-login-user-form .forms-wrapper form .input-wrapper input {
+    font-size: 18px;
+  }
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input::-moz-placeholder {
+  -moz-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:-ms-input-placeholder {
+  -ms-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input::placeholder {
+  transition: 500ms ease-in-out;
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:focus {
+  border: solid 2px #00b371;
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:focus::-moz-placeholder {
+  transform: translateX(-100%);
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:focus:-ms-input-placeholder {
+  transform: translateX(-100%);
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:focus::placeholder {
+  transform: translateX(-100%);
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:focus + label {
+  transform: translateX(0%);
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:valid {
+  border: solid 2px #00b371;
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:valid::-moz-placeholder {
+  transform: translateX(-100%);
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:valid:-ms-input-placeholder {
+  transform: translateX(-100%);
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:valid::placeholder {
+  transform: translateX(-100%);
+}
+.register-and-login-user-form .forms-wrapper form .input-wrapper input:valid + label {
+  transform: translateX(0%);
+}
+.register-and-login-user-form .forms-wrapper form button {
+  margin: 40px 0px 20px 0px;
+  font-size: 22px;
+}/*# sourceMappingURL=RegisterAndLoginUserForms.css.map */

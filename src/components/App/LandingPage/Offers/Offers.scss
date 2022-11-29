@@ -1,0 +1,106 @@
+.offers {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  padding: 0px 50px 100px 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+
+  @media screen and (max-width: 680px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 300px;
+    height: auto;
+    aspect-ratio: 0.8;
+    background-color: #ccffe2;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    margin: 0px 50px 0px 50px;
+    filter: drop-shadow(0px 0px 12px #233129);
+    flex-shrink: 0;
+
+    @media screen and (max-width: 1200px) {
+      width: 250px;
+      margin: 0px 25px 0px 25px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 225px;
+    }
+
+    @media screen and (max-width: 840px) {
+      width: 180px;
+    }
+
+    @media screen and (max-width: 680px) {
+      width: 250px;
+      margin: 25px 0px 25px 0px;
+    }
+
+    .backgrond-icon {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      filter: blur(3px);
+
+      span {
+        font-size: 150px;
+        font-weight: 900;
+        color: #ccffe2;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 125px;
+        }
+
+        @media screen and (max-width: 840px) {
+          font-size: 100px;
+        }
+
+        @media screen and (max-width: 680px) {
+          font-size: 125px;
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      text-align: center;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 26px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      filter: drop-shadow(2px 2px 2px #233129);
+
+      @media screen and (max-width: 1200px) {
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        font-size: 22px;
+      }
+
+      @media screen and (max-width: 840px) {
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 680px) {
+        font-size: 20px;
+      }
+    }
+  }
+}

@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+  color: #203646;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  height: auto;
+  background-color: #e6fff1;
+}
+
+::selection {
+  background: #00ffa2;
+}
+
+.main-button {
+  width: auto;
+  height: auto;
+  background-color: #00b371;
+  padding: 8px 24px 8px 24px;
+  text-align: center;
+  border-radius: 10000px;
+  font-size: 26px;
+  color: #ffffff;
+  border: unset;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+
+.main-button:hover {
+  background-color: #00c97f;
+}
+
+.main-notification {
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 102, 102, 0.75);
+  padding: 8px 16px 8px 16px;
+  font-size: 22px;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10000000000000000;
+  transform: translate(0px, -100%);
+  animation: apear-notification 500ms forwards;
+}
+
+@keyframes apear-notification {
+  0% {
+    transform: translate(0px, -100%);
+  }
+  32% {
+    transform: translate(0px, 20px);
+  }
+  48% {
+    transform: translate(0px, -15px);
+  }
+  75% {
+    transform: translate(0px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0%);
+  }
 }

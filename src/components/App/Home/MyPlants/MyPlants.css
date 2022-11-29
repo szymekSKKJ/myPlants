@@ -1,0 +1,120 @@
+.my-plants {
+  max-width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  padding: 50px 50px 50px 100px;
+}
+@media screen and (max-width: 1024px) {
+  .my-plants {
+    padding: 25px 25px 25px 75px;
+  }
+}
+.my-plants .header {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  margin: 50px 0px 50px 100px;
+}
+@media screen and (max-width: 1024px) {
+  .my-plants .header {
+    margin: 50px 0px 50px 25px;
+  }
+}
+.my-plants .header h1 {
+  font-size: 50px;
+}
+@media screen and (max-width: 768px) {
+  .my-plants .header h1 {
+    font-size: 36px;
+  }
+}
+.my-plants .collection {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto 0px auto;
+  justify-content: center;
+}
+.my-plants .collection .plant {
+  width: 300px;
+  height: 575px;
+  background-color: #00b371;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 25px;
+  margin: 25px;
+}
+@media screen and (max-width: 1024px) {
+  .my-plants .collection .plant {
+    width: 250px;
+    height: 475px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .my-plants .collection .plant {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .my-plants .collection .plant {
+    height: 425px;
+  }
+}
+.my-plants .collection .plant .image {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  aspect-ratio: 10/16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 1024px) {
+  .my-plants .collection .plant .image {
+    aspect-ratio: 10/15;
+  }
+}
+.my-plants .collection .plant .image img {
+  width: 100%;
+  height: 100%;
+}
+.my-plants .collection .plant .name {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin: 12px 0px 12px 0px;
+}
+@media screen and (max-width: 1024px) {
+  .my-plants .collection .plant .name {
+    font-size: 22px;
+  }
+}
+.my-plants .collection .plant .watering {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+.my-plants .collection .plant .watering button {
+  background-color: #00c97f;
+  font-size: 20px;
+  padding: 6px 16px 6px 16px;
+  margin-left: auto;
+}
+.my-plants .collection .plant .watering button:hover {
+  background-color: #00e691;
+}
+@media screen and (max-width: 1024px) {
+  .my-plants .collection .plant .watering button {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=MyPlants.css.map */

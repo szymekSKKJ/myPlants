@@ -1,0 +1,159 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  padding: 50px 50px 50px 100px;
+}
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 25px 25px 25px 75px;
+  }
+}
+.main .header {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  margin: 50px 0px 50px 100px;
+}
+@media screen and (max-width: 1024px) {
+  .main .header {
+    margin: 50px 0px 50px 25px;
+  }
+}
+.main .header h1 {
+  font-size: 50px;
+}
+@media screen and (max-width: 768px) {
+  .main .header h1 {
+    font-size: 36px;
+  }
+}
+.main .plant-overview {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .plant-overview > .title {
+  text-align: center;
+  font-size: 32px;
+}
+@media screen and (max-width: 768px) {
+  .main .plant-overview > .title {
+    font-size: 28px;
+  }
+}
+.main .plant-overview .carousel {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  margin: 50px auto 50px auto;
+}
+@media screen and (max-width: 768px) {
+  .main .plant-overview .carousel {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.main .plant-overview .carousel .item {
+  width: 250px;
+  height: 500px;
+  background-color: #00b371;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 0px 50px 0px 50px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.main .plant-overview .carousel .item:hover .hover-content {
+  opacity: 1;
+}
+@media screen and (max-width: 1200px) {
+  .main .plant-overview .carousel .item {
+    width: 200px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main .plant-overview .carousel .item {
+    width: 180px;
+    height: 325px;
+    margin: 0px 25px 0px 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main .plant-overview .carousel .item {
+    margin: 25px;
+  }
+}
+.main .plant-overview .carousel .item .image {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  aspect-ratio: 10/16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.main .plant-overview .carousel .item .image img {
+  width: 100%;
+  height: 100%;
+}
+.main .plant-overview .carousel .item .title {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  text-align: center;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .main .plant-overview .carousel .item .title {
+    font-size: 20px;
+  }
+}
+.main .plant-overview .carousel .item .hover-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.33);
+  top: 0px;
+  left: 0px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: opacity 250ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.main .plant-overview .carousel .item .hover-content p {
+  color: #ffffff;
+  font-size: 26px;
+  background-color: transparent;
+  padding: 0px 12px 0px 12px;
+  z-index: 100;
+  text-shadow: 0px 0px 6px black;
+}
+.main .plant-overview .carousel .item .hover-content span {
+  color: rgba(0, 0, 0, 0.1525);
+  font-size: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  margin-left: 0px;
+}/*# sourceMappingURL=Main.css.map */
