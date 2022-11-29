@@ -16,7 +16,7 @@ const App = () => {
     // const url = await getDownloadURL(ref(storage, `usersProfileImage/${userId}`));
     // return url;
 
-    getDownloadURL(ref(storage, `usersProfileImage/${userId}`))
+    return getDownloadURL(ref(storage, `usersProfileImage/${userId}`))
       .then((url) => {
         return url;
       })
@@ -33,6 +33,8 @@ const App = () => {
         const { email, uid } = user;
 
         const userProfileImage = await getUserProfileImage(uid);
+
+        console.log(userProfileImage);
 
         const unsub = onSnapshot(doc(db, "users", uid), (doc) => {
           const { plants, username } = doc.data();
