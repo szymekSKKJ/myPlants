@@ -49,6 +49,10 @@ body {
   animation: apear-notification 500ms forwards;
 }
 
+.main-notification.positive {
+  background-color: rgba(0, 229, 145, 0.75);
+}
+
 @keyframes apear-notification {
   0% {
     transform: translate(0px, -100%);

@@ -1,0 +1,76 @@
+.another-user {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  padding: 50px 50px 50px (50px + 50px); // 50px means the width of option icon from Sidebar comoponent
+
+  @media screen and (max-width: 1024px) {
+    padding: 25px 25px 25px (25px + 50px);
+  }
+
+  .collection {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto 0px auto;
+    justify-content: center;
+
+    .plant {
+      width: 300px;
+      height: auto;
+      background-color: #00b371;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 25px;
+      margin: 25px;
+
+      @media screen and (max-width: 1024px) {
+        width: 250px;
+      }
+
+      @media screen and (max-width: 375px) {
+        height: 450px;
+      }
+
+      @media screen and (max-width: 320px) {
+        height: 425px;
+      }
+
+      .image {
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        aspect-ratio: 10/16;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        @media screen and (max-width: 1024px) {
+          aspect-ratio: 10/15;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .name {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        margin: 12px 0px 0px 0px;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

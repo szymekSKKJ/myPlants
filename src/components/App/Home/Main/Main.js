@@ -70,7 +70,13 @@ const Main = ({ sidebarRef }) => {
         <h1>Witaj {currentUser.username}!</h1>
       </div>
       <div className="plant-overview">
-        <h2 className="title">{plantsToWatering.length === 0 ? "Wszystkie Twoje rośliny są podlane" : "Poświęć uwagę swoim roślinom"}</h2>
+        <h2 className="title">
+          {currentUser.plants.length === 0
+            ? "Dodaj rośliny do kolekcji!"
+            : plantsToWatering.length === 0
+            ? "Wszystkie Twoje rośliny są podlane"
+            : "Poświęć uwagę swoim roślinom"}
+        </h2>
         <div className="carousel">
           {plantsToWatering.length !== 0
             ? plantsToWatering.map((plant, index) => {

@@ -144,10 +144,6 @@
   -moz-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
-.register-and-login-user-form .forms-wrapper form .input-wrapper input:-ms-input-placeholder {
-  -ms-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-}
 .register-and-login-user-form .forms-wrapper form .input-wrapper input::placeholder {
   transition: 500ms ease-in-out;
 }
@@ -155,9 +151,6 @@
   border: solid 2px #00b371;
 }
 .register-and-login-user-form .forms-wrapper form .input-wrapper input:focus::-moz-placeholder {
-  transform: translateX(-100%);
-}
-.register-and-login-user-form .forms-wrapper form .input-wrapper input:focus:-ms-input-placeholder {
   transform: translateX(-100%);
 }
 .register-and-login-user-form .forms-wrapper form .input-wrapper input:focus::placeholder {
@@ -170,9 +163,6 @@
   border: solid 2px #00b371;
 }
 .register-and-login-user-form .forms-wrapper form .input-wrapper input:valid::-moz-placeholder {
-  transform: translateX(-100%);
-}
-.register-and-login-user-form .forms-wrapper form .input-wrapper input:valid:-ms-input-placeholder {
   transform: translateX(-100%);
 }
 .register-and-login-user-form .forms-wrapper form .input-wrapper input:valid::placeholder {

@@ -6,6 +6,7 @@ import { doc, getDoc, onSnapshot } from "firebase/firestore";
 import { useEffect, useState, createContext } from "react";
 import { db, storage } from "../../initializeFirebase";
 import { ref, getDownloadURL } from "firebase/storage";
+import defaultUserImage from "../../assets/default_user.png";
 
 export const currentUserContext = createContext(undefined);
 
@@ -16,7 +17,7 @@ const App = () => {
     // const url = await getDownloadURL(ref(storage, `usersProfileImage/${userId}`));
     // return url;
 
-    return getDownloadURL(ref(storage, `usersProfileImage/${userId}`))
+    return getDownloadURL(ref(storage, `usersProfileImages/${userId}`))
       .then((url) => {
         return url;
       })
@@ -34,8 +35,6 @@ const App = () => {
 
         const userProfileImage = await getUserProfileImage(uid);
 
-        console.log(userProfileImage);
-
         const unsub = onSnapshot(doc(db, "users", uid), (doc) => {
           const { plants, username } = doc.data();
 
@@ -46,7 +45,7 @@ const App = () => {
             email: email,
             username: username,
             plants: sortedPlants,
-            profileImage: userProfileImage,
+            profileImage: userProfileImage !== undefined ? userProfileImage : defaultUserImage,
           });
         });
       } else {

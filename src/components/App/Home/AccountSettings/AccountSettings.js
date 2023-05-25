@@ -26,7 +26,7 @@ const AccountSettings = () => {
             inputElementFile.type.toLocaleLowerCase().includes("jpg") ||
             inputElementFile.type.toLocaleLowerCase().includes("jpeg")
           ) {
-            const storageRef = ref(storage, `usersProfileImage/${currentUser.id}`);
+            const storageRef = ref(storage, `usersProfileImages/${currentUser.id}`);
             uploadBytes(storageRef, inputElementFile).then((snapshot) => {
               console.log("Uploaded a blob or file!");
               window.location.reload();

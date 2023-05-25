@@ -1,6 +1,11 @@
-const createNotification = (content, isPositive) => {
+const createNotification = (content, isPositive = false) => {
   const notificationElement = document.createElement("div");
   notificationElement.classList.add(`main-notification`);
+
+  if (isPositive) {
+    notificationElement.classList.add(`positive`);
+  }
+
   notificationElement.innerHTML = `<p>${content}</p>`;
   document.body.appendChild(notificationElement);
 

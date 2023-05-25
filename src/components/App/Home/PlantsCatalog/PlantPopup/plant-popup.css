@@ -17,17 +17,26 @@
   height: 80vh;
   background-color: #e6fff1;
   border-radius: 4px;
-  padding: 20px 40px 20px 40px;
+  padding: 0px 40px 20px 40px;
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: auto;
 }
 @media screen and (max-width: 768px) {
   .plant-popup .content {
     padding: 10px 20px 10px 20px;
   }
 }
-.plant-popup .content button {
+.plant-popup .content .content-header {
+  width: 100%;
+  height: auto;
+  background-color: #e6fff1;
+  position: sticky;
+  top: 0px;
+  padding-top: 20px;
+}
+.plant-popup .content .content-header button {
   position: absolute;
   top: 20px;
   right: 40px;
@@ -35,45 +44,45 @@
   z-index: 100;
 }
 @media screen and (max-width: 768px) {
-  .plant-popup .content button {
+  .plant-popup .content .content-header button {
     font-size: 16px;
     padding: 6px 12px 6px 12px;
   }
 }
-.plant-popup .content h1 {
+.plant-popup .content .content-header h1 {
   font-size: 50px;
 }
 @media screen and (max-height: 534px) {
-  .plant-popup .content h1 {
+  .plant-popup .content .content-header h1 {
     font-size: 44px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .plant-popup .content h1 {
+  .plant-popup .content .content-header h1 {
     font-size: 42px;
   }
 }
 @media screen and (max-width: 768px) {
-  .plant-popup .content h1 {
+  .plant-popup .content .content-header h1 {
     font-size: 32px;
   }
 }
-.plant-popup .content h2 {
+.plant-popup .content .content-header h2 {
   font-size: 28px;
   transform: translate(20px, -4px);
 }
 @media screen and (max-height: 534px) {
-  .plant-popup .content h2 {
+  .plant-popup .content .content-header h2 {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .plant-popup .content h2 {
+  .plant-popup .content .content-header h2 {
     font-size: 22px;
   }
 }
 @media screen and (max-width: 768px) {
-  .plant-popup .content h2 {
+  .plant-popup .content .content-header h2 {
     font-size: 18px;
   }
 }
@@ -81,8 +90,9 @@
   width: 100%;
   height: 500px;
   background-color: transparent;
+  flex-shrink: 0;
   display: flex;
-  margin: auto 0px auto 0px;
+  margin: 25px 0px auto 0px;
   overflow: auto;
 }
 @media screen and (max-height: 800px) {
@@ -145,4 +155,99 @@
 }
 .plant-popup .content .image-and-description-wrapper .description span {
   font-weight: 800;
+}
+.plant-popup .content .users-comments {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.plant-popup .content .users-comments h2 {
+  text-align: center;
+  font-size: 32px;
+}
+.plant-popup .content .users-comments .user-comment {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.plant-popup .content .users-comments .user-comment .image {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.plant-popup .content .users-comments .user-comment .image img {
+  width: 100%;
+  height: 100%;
+}
+.plant-popup .content .users-comments .user-comment .wrapper {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.plant-popup .content .users-comments .user-comment .wrapper .username {
+  width: 100%;
+  height: 22px;
+  background-color: transparent;
+  margin-bottom: 5px;
+  flex-shrink: 0;
+}
+.plant-popup .content .users-comments .user-comment .wrapper .username p {
+  word-wrap: break-word;
+  font-size: 20px;
+  padding-left: 10px;
+  height: 22px;
+}
+.plant-popup .content .users-comments .user-comment .wrapper .comment {
+  width: 100%;
+  height: auto;
+  min-height: 22px;
+  max-height: 200px;
+  background-color: transparent;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  overflow: auto;
+  margin: auto 0px auto 0px;
+  display: flex;
+  flex-direction: column;
+}
+.plant-popup .content .users-comments .user-comment .wrapper .comment textarea {
+  width: 100%;
+  height: 78px;
+  resize: none;
+  border: 2px solid transparent;
+  transition: 250ms;
+  outline: none;
+  border-radius: 4px;
+  padding: 4px 16px 4px 16px;
+  font-size: 16px;
+}
+.plant-popup .content .users-comments .user-comment .wrapper .comment textarea:focus {
+  border: 2px solid #00b371;
+}
+.plant-popup .content .users-comments .user-comment .wrapper .comment button {
+  font-size: 16px;
+  margin-left: auto;
+  margin-top: 10px;
+  padding: 6px 20px 6px 20px;
+}
+.plant-popup .content .users-comments .user-comment .wrapper .comment p {
+  line-height: 1.1;
+  font-size: 18px;
+  word-break: break-all;
+  word-wrap: break-word;
 }/*# sourceMappingURL=plant-popup.css.map */

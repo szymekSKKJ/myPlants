@@ -1,0 +1,77 @@
+.another-user {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  padding: 50px 50px 50px 100px;
+}
+@media screen and (max-width: 1024px) {
+  .another-user {
+    padding: 25px 25px 25px 75px;
+  }
+}
+.another-user .collection {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto 0px auto;
+  justify-content: center;
+}
+.another-user .collection .plant {
+  width: 300px;
+  height: auto;
+  background-color: #00b371;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 25px;
+  margin: 25px;
+}
+@media screen and (max-width: 1024px) {
+  .another-user .collection .plant {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .another-user .collection .plant {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .another-user .collection .plant {
+    height: 425px;
+  }
+}
+.another-user .collection .plant .image {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  aspect-ratio: 10/16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 1024px) {
+  .another-user .collection .plant .image {
+    aspect-ratio: 10/15;
+  }
+}
+.another-user .collection .plant .image img {
+  width: 100%;
+  height: 100%;
+}
+.another-user .collection .plant .name {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin: 12px 0px 0px 0px;
+}
+@media screen and (max-width: 1024px) {
+  .another-user .collection .plant .name {
+    font-size: 22px;
+  }
+}/*# sourceMappingURL=AnotherUser.css.map */

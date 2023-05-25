@@ -4,13 +4,17 @@ import { useContext } from "react";
 import { currentUserContext } from "../../App";
 import { getAuth, signOut } from "firebase/auth";
 
-const Sidebar = ({ componentsUseStates, sidebarRef, setCurrentUser }) => {
+const Sidebar = ({ componentsUseStates, sidebarRef, setCurrentUser, setGivenUserIdInUrl }) => {
   const currentUser = useContext(currentUserContext);
 
   const openComponent = (index) => {
     componentsUseStates.forEach((componentUseState) => {
       componentUseState.useState(false);
     });
+
+    window.history.pushState(null, "", window.location.pathname);
+
+    setGivenUserIdInUrl(null);
 
     componentsUseStates[index].useState(true);
   };
