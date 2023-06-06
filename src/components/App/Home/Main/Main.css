@@ -14,6 +14,9 @@
   height: auto;
   background-color: transparent;
   margin: 50px 0px 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 @media screen and (max-width: 1024px) {
   .main .header {
@@ -27,6 +30,14 @@
   .main .header h1 {
     font-size: 36px;
   }
+}
+.main .header button {
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main .plant-overview {
   width: 100%;

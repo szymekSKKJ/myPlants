@@ -4,6 +4,7 @@ import { currentUserContext } from "../../App";
 import { collection, getDocs } from "firebase/firestore";
 import { db, storage } from "../../../../initializeFirebase";
 import { ref, getDownloadURL } from "firebase/storage";
+import createNotification from "../../../../customJS/createNotification";
 
 const Main = ({ sidebarRef }) => {
   const currentUser = useContext(currentUserContext);
@@ -66,42 +67,69 @@ const Main = ({ sidebarRef }) => {
 
   return (
     <div className="main">
-      <div className="header">
-        <h1>Witaj {currentUser.username}!</h1>
-      </div>
-      <div className="plant-overview">
-        <h2 className="title">
-          {currentUser.plants.length === 0
-            ? "Dodaj rośliny do kolekcji!"
-            : plantsToWatering.length === 0
-            ? "Wszystkie Twoje rośliny są podlane"
-            : "Poświęć uwagę swoim roślinom"}
-        </h2>
-        <div className="carousel">
-          {plantsToWatering.length !== 0
-            ? plantsToWatering.map((plant, index) => {
-                if (index < 3) {
-                  const { id } = plant;
-                  const foundPlant = plants.find((plantLocal) => plantLocal.id === id);
-                  const { polishName, url } = foundPlant;
+      {currentUser && (
+        <>
+          <div className="header">
+            <h1>Witaj {currentUser.username}!</h1>
+            <button
+              className="main-button"
+              onClick={() => {
+                createNotification("Skopiowano link do schowka", true);
 
-                  return (
-                    <div className="item" onClick={() => moveToMyPlant()}>
-                      <div className="image">
-                        <img src={url}></img>
-                      </div>
-                      <p className="title">{polishName}</p>
-                      <div className="hover-content">
-                        <p>Przejdź do rośliny</p>
-                        <span className="material-symbols-outlined">potted_plant</span>
-                      </div>
-                    </div>
-                  );
+                const text = `${document.URL}?user=${currentUser.id}`;
+                const textarea = document.createElement("textarea");
+                textarea.textContent = text;
+                textarea.style.position = "fixed"; // Prevent scrolling to bottom of page in Microsoft Edge.
+                document.body.appendChild(textarea);
+                textarea.select();
+
+                try {
+                  return document.execCommand("copy"); // Security exception may be thrown by some browsers.
+                } catch (ex) {
+                  console.warn("Copy to clipboard failed.", ex);
+                  return prompt("Copy to clipboard: Ctrl+C, Enter", text);
+                } finally {
+                  document.body.removeChild(textarea);
                 }
-              })
-            : null}
-        </div>
-      </div>
+              }}>
+              <span className="material-symbols-outlined">share</span>
+            </button>
+          </div>
+          <div className="plant-overview">
+            <h2 className="title">
+              {currentUser.plants.length === 0
+                ? "Dodaj rośliny do kolekcji!"
+                : plantsToWatering.length === 0
+                ? "Wszystkie Twoje rośliny są podlane"
+                : "Poświęć uwagę swoim roślinom"}
+            </h2>
+            <div className="carousel">
+              {plantsToWatering.length !== 0
+                ? plantsToWatering.map((plant, index) => {
+                    if (index < 3) {
+                      const { id } = plant;
+                      const foundPlant = plants.find((plantLocal) => plantLocal.id === id);
+                      const { polishName, url } = foundPlant;
+
+                      return (
+                        <div className="item" onClick={() => moveToMyPlant()}>
+                          <div className="image">
+                            <img src={url}></img>
+                          </div>
+                          <p className="title">{polishName}</p>
+                          <div className="hover-content">
+                            <p>Przejdź do rośliny</p>
+                            <span className="material-symbols-outlined">potted_plant</span>
+                          </div>
+                        </div>
+                      );
+                    }
+                  })
+                : null}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

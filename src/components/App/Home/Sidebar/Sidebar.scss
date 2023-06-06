@@ -1,21 +1,11 @@
 .sidebar {
-  width: 300px;
+  width: 100%;
   height: 100%;
   background-color: #00b371;
   display: flex;
   flex-direction: column;
   border-right: solid 3px #203646;
-  transform: translateX(calc(-100% + 50px)); // 50px means width of option icon
-  transition: transform 350ms;
-  position: fixed;
-  top: 0px;
-  left: 0px;
   filter: drop-shadow(0px 0px 16px black);
-  z-index: 100000000;
-
-  &:hover {
-    transform: translateX(0px);
-  }
 
   .user-profile {
     width: 100%;
@@ -74,6 +64,7 @@
       justify-content: space-between;
       padding: 0px 0px 0px 16px;
       transition: background-color 250ms;
+      border: none;
       cursor: pointer;
 
       &:hover {
